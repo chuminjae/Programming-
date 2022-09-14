@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+    int a;
+    string plan;
+    int dx[4] = {0,0,-1,1};
+    int dy[4] = {1,-1,0,0};
+    char positionchange[4] ={'R', 'L', 'U', 'D'};
+
+int main(){
+    int x1 = 1;
+    int y1 = 1;
+    cin >> a;
+    cin.ignore();
+    getline(cin, plan);
+    for(int i = 0; i < plan.size(); i++){
+        char plan1 = plan[i];
+        for(int j = 0; j < 4; j++){
+            if(plan1 == positionchange[j]){
+                if(x1 + dx[j] <= 0 || x1 + dx[j] >= a + 1 || y1 + dy[j] <= 0 || y1 + dy[j] >= a + 1 ){
+                    break;
+                }
+                x1 += dx[j];
+                y1 += dy[j];
+            }
+        }
+    }
+    cout << x1 << " " << y1;
+
+    }
+
