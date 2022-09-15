@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int k = 499;
+    int p = 500;
+    int cnt = 0;
+    for(int i = 1; i < 500; i++){
+        cnt = cnt + k % i;
+    }
+    for(int j = 1; j < 501; j++){
+        cnt = cnt - p % j;
+    }
+    cout << cnt;
+
+
+}
