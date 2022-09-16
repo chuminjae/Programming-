@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-string a, b;
+string a, b, c;
 int n;
 stack <string> s;
 int main(){
     cin >> n;
     cin.ignore();
-    string c[n];
     for(int i = 1; i <= n; i++){
         getline(cin, a);
         for(int j = 0; j < a.length(); j++){
