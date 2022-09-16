@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+string a, b;
+int n;
+stack <string> s;
+int main(){
+    cin >> n;
+    cin.ignore();
+    string c[n];
+    for(int i = 1; i <= n; i++){
+        getline(cin, a);
+        for(int j = 0; j < a.length(); j++){
+            if(a[j] ==' '){
+                s.push(b);
+                s.push(" ");
+                b.clear();
+            }
+            else{
+                b = b + a[j];
+            }
+        }
+        s.push(b);
+        while(!s.empty()){
+            c = c + s.top();
+            s.pop();
+        }
+        cout << "case #" << i  << ":" << c << "\n";
+        c.clear();
+        a.clear();
+        b.clear();
+}
+}
+
