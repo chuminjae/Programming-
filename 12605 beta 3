@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n;
+string a;
+string sentence(string a){
+    string tmp;
+    string ans;
+    vector <string> s;
+    for(int i = 0; i < a.size(); i++){
+        tmp = tmp + a[i];
+        if(a[i] == ' ' || i == a.size() - 1){
+            s.push_back(tmp);
+            tmp.clear();
+        }
+    }
+     for(int i = s.size(); i >= 0; i++){
+        ans = ans + s[i];
+        if(i == s.size() - 1){
+            ans = ans + " ";
+        }
+    }
+    return ans;
+    }
+    int main(){
+    cin >> n;
+    cin.ignore();
+    for(int j = 0; j < n; j++){
+        getline(cin, a);
+        string p = sentence(a);
+        cout << p << "\n";
+    }
+
+    }
