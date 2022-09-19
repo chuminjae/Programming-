@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector <pair<int, int>> p[3];
+    int n = 2;
+    int x = 1;
+    int a[3];
+    int x[6], y[6];
+    int cnt ++;
+    for(int i = 0; i < 6; i++){
+        cin >> x[i] >> y[i];
+       }
+    for(int v = 0; v < 6; v+= 2){
+        for(int k = x[v]; k < x[v + 1]; k ++){
+            for(int j = y[v]; j < y[v + 1]; j++){
+            p[x].push_back(k, j);
+        }
+    }
+    x++;
+    }
+    for(int i = 0; i < 3; i++){
+        
+    }
+    for(i = 0; i < 2; i++){
+        for(int j = 0; j < 2; j ++){
+            if(i == 1){
+                 if(p[i][j] == p[i + 1][j]){
+                cnt ++;
+            }
+            }
+            else{
+                if(p[i][j] == p[i + 2][j]){
+                cnt ++;
+            }
+            } 
+    }
+    }
+    
+
+
+
+
