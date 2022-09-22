@@ -1,0 +1,94 @@
+public class GradesV2
+{
+
+
+    public static void main(String[] args)
+    {     // instance variables - replace the example below with your own
+   //local variables
+        int numTests = 0;      //counts number of tests
+        int testGrade = 0;     //individual test grade
+        int totalPoints = 0;   //total points for all tests
+        double average = 0.0;  //average grade
+        
+        testGrade = 95;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 73;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 91;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 82;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 54;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 80;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 12;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 52;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+        
+        testGrade = 92;
+        numTests ++;
+        average += numTests;
+        totalPoints += testGrade;
+        System.out.print("Test  # " + numTests + "\t");
+        System.out.print("Testgrade: " + testGrade + "\t");
+        System.out.print("Totalpoints:   " + totalPoints + "\t");
+        System.out.println("Average Score: " + (double)totalPoints / numTests + "\t");
+    }   
+}
