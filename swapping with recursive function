@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+void swapping(int n, int m){
+    int c;
+    c = n;
+    n = m;
+    m = c;
+    cout << n  << " " << m;
+
+    }
+int main() {
+    int a, b;
+    cout << "plug in the number you want to swap" << "\n";
+    cin >> a >> b;
+    swapping(a, b);
+    }
+
+
+
+
+
