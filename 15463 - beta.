@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<pair<int, int>> v;
+vector <pair<int, int >> t;
+vector <pair<int, int >> c;
+int count0;
+int count1;
+int main(){
+    int x[6];
+    int y[6];
+    int k = 0;
+    for(int i  = 0; i < 6; i++){
+        cin >> x[i] >> y[i];
+    }
+    for(int i = x[0]; i <= x[1]; i++){
+        for(int j = y[0]; j <= y[1]; j++){
+            v.push_back({i, j});
+        }
+    }
+    count1 += v.size();
+    k = 0;
+    for(int i = x[2]; i <= x[3]; i++){
+        for(int j = y[2]; j <= y[3]; j++){
+            t.push_back({i, j});
+        }
+    }
+     count1 += t.size();
+    k = 0;
+    for(int i = x[4]; i <= x[5]; i++){
+        for(int j = y[4]; j <= y[5]; j++){
+           c.push_back({i, j});
+        }
+
+    }
+    int cnt  = v.size();
+    for(int i = 0; i < cnt  - 1; i++){
+        for(int j = 0; j < cnt  - 1; j++){
+            if(v[i] == c[j]) {
+                count0 ++;
+            }
+        }
+    }
+    cnt == t.size();
+        for(int i = 0; i < cnt  - 1; i++){
+        for(int j = 0; j < cnt  - 1; j++){
+            if(t[i] == c[j]) {
+                count0 ++;
+            }
+        }
+    }
+    cout << count1 - count0;
+}
