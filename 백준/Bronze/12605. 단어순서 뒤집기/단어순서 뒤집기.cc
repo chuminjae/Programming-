@@ -1,36 +1,37 @@
-#include <iostream>
-#include <stack>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-
-    int N; cin >> N;
-    cin.ignore();
-    for (int i = 1; i <= N; i++) {
-        string s, temp, ans;
-        stack<string> st;
-        getline(cin, s);
-
-        for (int k = 0; k < s.length(); k++) {
-            if (s[k] == ' ') {
-                st.push(temp);
-                st.push(" ");
-                temp.clear();
-            }
-            else temp += s[k];
+int n;
+string reversing(string a){
+    stack<string> s;
+    string tmp;
+    string ans;
+    int size = a.size();
+    for(int i  = 0; i < size; i++){
+        tmp = tmp + a[i];
+        if(i == size  - 1){
+            tmp = tmp + ' ';
         }
-        st.push(temp);
-        while (!st.empty()) {
-            ans += st.top();
-            st.pop();
+        if(a[i] == ' ' || i == size - 1){
+            s.push(tmp);
+            tmp.clear();
         }
-        cout << "Case #" << i << ": " << ans << "\n";
-
+    }
+    while(!s.empty()){
+        ans = ans + s.top();
+        s.pop();
 
     }
 
+    return ans;
+    }
 
+int main(){
+    cin >> n;
+    cin.ignore();
+    for(int i = 0; i < n; i++){
+        string sen;
+        getline(cin,sen);
+        sen = reversing(sen);
+        cout << "Case #" << i + 1 << ": " << sen << '\n';
+    }
 }
