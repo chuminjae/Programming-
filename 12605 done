@@ -28,7 +28,7 @@ string reversing(string a){
 int main(){
     cin >> n;
     cin.ignore();
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         string sen;
         getline(cin,sen);
         sen = reversing(sen);
