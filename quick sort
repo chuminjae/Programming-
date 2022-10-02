@@ -1,0 +1,38 @@
+# include <bits/stdc++.h>
+using namespace std;
+void qsort(int* n, int start, int end){
+    if(start  >= end) return;
+    int pivot = start;
+    int left = start + 1;
+    int right = end;
+    while(left <= right){
+        while(left <= end && n[left] <= n[pivot]){
+            left ++;
+        }
+        while(right > start && n[right] >= n[pivot]){
+            right --;
+        }
+        if(left > right){
+            swap(n[pivot], n[right]);
+        }
+        else{
+            swap(n[left], n[right]);
+        }
+
+    }
+    qsort(n, start, right - 1);
+    qsort(n, right + 1, end);
+    }
+    int main(){
+        int p;
+        cin >> p;
+        int n[p];
+        for(int i = 0; i < p; i++){
+            cin >> n[i];
+        }
+        qsort(n, 0, p - 1);
+        for(int i  = 0; i < p; i++){
+            cout << n[i] << "\n";
+        }
+
+}
