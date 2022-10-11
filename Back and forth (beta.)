@@ -1,0 +1,68 @@
+# include <iostream>
+#include <algorithm>
+# include <vector>
+using namespace std;
+int a[20];
+int b[20];
+int cnt;
+int q = 9;
+vector<int> s;
+int main() {
+	int amount = 1000;
+	for (int i = 0; i < 10; i++) {
+		cin >> a[i];
+	}
+	for (int i = 0; i < 10; i++) {
+		cin >> b[i];
+	}
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 11; j++) {
+			for (int k = 0; k < 11; k++) {
+				for (int n = 0; n < 11; n++) {
+					if (a[i] != 0 && b[j] != 0 && a[k] != 0 && b[n] != 0) {
+						amount = amount - a[i];
+						cout << a[i];
+						b[q] = a[i];
+						a[i] = 0;
+						amount = amount + b[j];
+						cout << b[j];
+						a[q] = b[j];
+						b[j] = 0;
+						amount = amount - a[k];
+						cout << a[k];
+						b[q++] = a[k];
+						a[k] = 0;
+						amount = amount + b[n];
+						cout << b[n];
+						a[q++] = b[n];
+						b[n] = 0;
+						cout << amount << "\n";
+					}
+				}
+				q = 10;
+				s.push_back(amount);
+				amount = 1000;
+			}
+		
+			}
+		}
+	int k = s.size();
+	int check = 0;
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			if (s[i] = s[j]) {
+				check++;
+			}
+		}
+		if (check == 2) {
+			s[i] = 0;
+		}
+	}
+	int cnt = 0;
+	for (int i = 0; i < k; i++) {
+		if (s[i] != 0) {
+			cnt++;
+		}
+	}
+	cout << cnt;
+	}
