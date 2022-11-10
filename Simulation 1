@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+# include <deque>
+using namespace std;
+int cnt;
+int x;
+int y;
+int x1;
+int y1;
+int main()
+{
+    int a, b;
+    int m, n, p, q;
+    for(int i = 0; i < 2; i++){
+        cin >> a >> b;
+    }
+    x1 = a;
+    y1 = b;
+    for(int i = 0; i < 4; i++){
+        cin >> m >> n >> p >> q;
+    }
+
+    while(x < x1 && y < y1){
+        if(!(x == x1 && y== y1)){
+        x += m;
+        y += n;
+        x1 -= p;
+        y1 -= q;
+        cnt++;
+        }
+    }
+    if(cnt != 0){
+        cout << cnt;
+    }
+    else{
+        cout << -1;
+    }
+
+}
