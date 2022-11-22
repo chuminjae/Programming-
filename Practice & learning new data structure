@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    set <int> s;
+    for(int i = 0; i < 10; i++){
+        s.insert(i);
+    }
+    for(int p = 3; p < 11; p++){
+        s.insert(p);
+    }
+    auto itr = s.find(1);
+    int k = *itr;
+    cout << k << " ";
+    cout << s.count(1) << " ";
+    s.erase(10);
+    for(auto element : s){
+        cout << element << " ";
+    }
+    cout << *s.lower_bound(7);
+    cout << *s.upper_bound(7);
+    cout << "\n";
+    auto itre = s.end();
+    cout << * (--itre);
+
+
+    deque <int> l;
+    for(int i = 0; i< 11; i++){
+        l.push_front(i);
+        l.push_back(i);
+    }
+    for(int i = 0; i < 5; i++){
+        l.pop_back();
+        l.pop_front();
+    }
+
+
+    map<int, string> q;
+    q[1] = "Apple";
+    q[2] = "q";
+    q[3] = "w";
+    cout << q.lower_bound(2) -> second;
+
+
+
+
+
+
+
+}
