@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+   int r, s;
+   cin >> r >> s;
+   int ax = 0;
+   int ay = 0;    
+   int bx = r;
+   int by = s;
+   int m, n, p, q;
+   cin >> m >> n >> p >>q;
+   while(ax <= bx && ay <= by){
+        ax += m;
+        ay += n;
+        bx += p;
+        by += q;
+        t++;
+        if(ax == bx && ay = by){
+            cout << t;
+        }
+    }
+    if(t == 0){
+        cout << -1;
+    }
+
+   
+    
+
+}
