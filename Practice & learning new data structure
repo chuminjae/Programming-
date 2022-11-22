@@ -41,6 +41,19 @@ int main(){
     cout << q.lower_bound(2) -> second;
 
 
+#include <bits/stdc++.h>
+# include <fstream>
+using namespace std;
+int main(){
+    ifstream fin(".txt");
+    ofstream fout(".txt");
+    cin --> should be in fin
+    cout --> should be in fout
+
+
+}
+
+
 
 
 
