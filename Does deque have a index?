@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+# include <deque>
+
+int main()
+{
+    deque <int> s;
+    s.push_back(1);
+    s.push_front(2);
+    cout << s[0];
+}
