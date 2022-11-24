@@ -1,0 +1,37 @@
+# include <bits/stdc++.h>
+# include <math.h>
+using namespace std;
+int main(){
+    int a, b;
+    cin >> a >> b;
+    int q = 0;
+    int k = 1;
+    int d = 0;
+    int mp = a;
+    int distance = 0;
+    while(1){
+        if(q %2 == 0){
+            for(int i = 1; i <= k;){
+                mp = a+ i;
+                d++;
+                if(mp == b){
+                    break;
+                }
+                
+            }
+            k = k * 2;
+            q++;
+        }
+        else{
+            for(int i = 1; i <= k;){
+                mp = a - i;
+                if(mp == b){
+                    break;
+                }
+                distance += i;
+            }
+            k = k * 2;
+            q++;
+        }
+    }
+}
