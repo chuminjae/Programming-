@@ -1,0 +1,50 @@
+    # include <bits/stdc++.h>
+    # include <math.h>
+    using namespace std;
+    int main(){
+       int n;
+       bool k;
+       cin >> n;
+       int b[n - 1];
+       int a[n];
+       for(int i = 0; i < n - 1; i++){
+        cin >> b[i];
+       }
+       for(int i = 0; i < n; i++){
+        a[i] = 0;
+       }
+       for(int i = 0; i < b[0]; i++){
+            a[0] = i;
+        for(int j = 1; j < n; j++){
+            a[j] = b[j - 1] - a[j - 1];
+        }
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(i != j){
+                    if(a[i] == a[j]){
+                        k = false;
+                    }
+                }
+            }
+            if(a[i] == 0){
+                k = false;
+            }
+        }
+        if(k == false){
+            for(int i = 0; i < n; i++){
+                a[i] = 0;
+            }
+        }
+        else{
+            for(int i = 0; i < n; i++){
+            cout << a[i] << ' ';
+       }
+       return 0;
+    }
+        k = true;
+       }
+
+    }
+
+
+
