@@ -1,0 +1,39 @@
+ # include <bits/stdc++.h>
+    # include <math.h>
+    using namespace std;
+    int a[11][21];
+    int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+       int k, n;
+       int r;
+       bool check;
+       int cnt = 0;
+       cin >> k >> n;
+       for(int i = 0; i < k; i++){
+        for(int j = 0; j < n; j++){
+            cin >> r;
+            a[i][r] = j;
+        }
+       }
+       for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= n; j++)
+            {
+                if(i == j) continue;
+                check = true;
+                for(int e = 0; e < k; e++)
+                {
+                if(a[e][i] > a[e][j])
+                    {
+                        check = false;
+                    }
+                }
+                if(check)
+                {
+                cnt ++;
+                }
+            }
+       }
+        cout << cnt;
+        return 0;
+    }
