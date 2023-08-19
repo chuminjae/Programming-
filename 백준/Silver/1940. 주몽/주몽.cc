@@ -3,7 +3,12 @@
 using namespace std;
 int n, m;
 int cnt;
-int a[20000];
+int a[2000000];
+int b[100000];
+int curr;
+int ln;
+int fin;
+int sum;
 main()
 {
     ios::sync_with_stdio(false);
@@ -13,17 +18,22 @@ main()
     for(int i = 0; i < n; i++){
         cin >> a[i];
     }
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(i != j){
-            if(a[i] + a[j] ==m){
-                cnt ++;
-            }
+    sort(a, a + n);
+    int l = 0;
+    int r = n  - 1;
+    while(l < r){
+        sum = a[l] + a[r];
+        if(sum == m){
+            cnt++;
+            l++;
         }
+        else if(sum > m){
+            r--;
+        }
+        else if(sum < m){
+            l++;
         }
 
     }
-    cout << cnt / 2;
-
-
+    cout << cnt;
 }
