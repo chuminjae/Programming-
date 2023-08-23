@@ -1,28 +1,27 @@
-# include <bits/stdc++.h>
-long long a[100000];
+#include <bits/stdc++.h>
 using namespace std;
- int main(){
-    long long n;
-    cin >> n;
-    vector <long long> s(n);
-    long long k = n;
-    long long v;
-    for(long long i = 0; i < n; i++){
-        cin >> v;
-        s[i] = v;
-    }
-    sort(s.begin(), s.end());
-    for(long long i = 0; i < n; i++){
-        a[i] = s[i] * (n - i);
-    }
-    long long mx = a[0];
-    for(long long i = 0; i < n; i++){
-        mx = max(mx, a[i]);
-    }
-    for(long long i = 0; i < n; i++){
-        if(a[i] == mx){
-            cout << a[i] << " " << s[i];
-            break;
-        }
-    }
+int main() {
+	int totalNumberOfCows;
+	int x;
+	long long maxMoney = 0;
+	int bestTuition = 0;
+	cin >> totalNumberOfCows;
+	// need to use long long
+	vector<long long> maxTuition;
+	for (int i = 0; i < totalNumberOfCows; i++) {
+		cin >> x;
+		maxTuition.push_back(x);
+	}
+	// sorting
+	sort(maxTuition.begin(), maxTuition.end());
+	for (int i = 0; i < totalNumberOfCows; i++) {
+		// there are (totalNumberOfCows - i) cows that can pay the tuition.
+		long long currentTuition = maxTuition[i] * (totalNumberOfCows - i);
+		if (currentTuition > maxMoney) {
+			maxMoney = currentTuition;
+			bestTuition = maxTuition[i];
+		}
+	}
+
+	cout << maxMoney << ' ' << bestTuition << endl;
 }
