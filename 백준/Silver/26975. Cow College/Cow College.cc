@@ -3,8 +3,8 @@ using namespace std;
 int main() {
 	int totalNumberOfCows;
 	int x;
-	long long maxMoney = 0;
 	int bestTuition = 0;
+	long long maxMoney = 0;
 	cin >> totalNumberOfCows;
 	// need to use long long
 	vector<long long> maxTuition;
